@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+*{
+    padding: 0; margin: 0; box-sizing: border-box;
+}
+body{
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    font-family: 'Rubik', sans-serif;
+}
+.topSection{
+    display: flex; flex-direction: column; align-items: center;
+    background: url(./images/pattern-bg.png); background-position: center; background-repeat: no-repeat;
+    width: 100%;color: white;
+    height: 40vh;
+    padding-top: 50px;
+    z-index: 1;
+}
+.topSection h1{
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.topSection input{
+    font-family: 'Rubik', sans-serif; font-size: 20px; width: 30vw; 
+    border: none; border-radius: 5px;
+    padding: 5px;
+    outline: none;
+}
+.topSection button{
+    background-color: black; font-size: 20px; padding:4px; 
+    padding-left: 10px; padding-right: 10px; margin-left: -5%; border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.resulSection{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    width: 70vw;
+    min-height: 20vh;
+    margin-top: -5%;
+    margin-bottom: -10%;
+    z-index: 1;
+}
+.resulSection p{
+    font-family: 'Rubik', sans-serif;
+    color: gray;
+    font-weight: 500; width: 100%;
+}
+.resulSection h1{
+    font-size: 25px;
+    font-family: 'Rubik', sans-serif;
+    overflow: hidden;
+}
+.ipAddress,.location,.timezone{
+    padding: 10px;
+    text-align: left;
+    border-right: 1px solid gray;
+    width: 25%;
+}
+.isp{
+    padding: 10px;
+    text-align: left;
+    width: 25%;
+}
+#map { min-height: 65vh; width: 100%; z-index: 0; margin-top: 3%; }
+
+@media (max-width:700px) {
+    .topSection{
+        /* height: 50vh; */
+    }
+    .topSection input{
+        width: 65vw;
+    }
+    .form{
+        margin-bottom: 20px;
+    }
+    .topSection button{
+        border: none;
+        padding: 6px;
+    }
+    ::placeholder{
+        font-size: 16px;
+    }
+    .resulSection{
+        display: block;
+        margin-top: -10%;
+        width: 80%;
+        margin-bottom: 0%;
+    }
+    .resulSection h1{
+        font-size: 16px;
+        text-align: center;
+    }
+    .isp{
+        padding: 0px;
+    }
+    .ipAddress,.location,.timezone,.isp{
+        padding: 2px;
+        border: none;
+        width: 100%;
+        text-align: center;
+    }
+    #map{
+        height: 70vh;
+        margin-top: -50%;
+        z-index: 0;
+    }
+}
+@media (min-width:700px) and (max-width:768px) {
+    .resulSection h1{
+        font-size: 15px;
+        text-align: left;
+    }
+}
